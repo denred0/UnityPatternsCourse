@@ -1,4 +1,4 @@
-public class FastRunningState : MovementWithLegsState
+public class FastRunningState : BaseMovingState
 {
     private FastRunningStateConfig _config;
 
@@ -19,6 +19,16 @@ public class FastRunningState : MovementWithLegsState
         base.Exit();
 
         View.StopFastRunning();
+    }
+
+    public override void Update()
+    {
+        base.Update();
+
+        if (IsFastRunKeyPressed)
+            return;
+
+        StateSwitcher.SwitchState<WalkingState>();
     }
 
 

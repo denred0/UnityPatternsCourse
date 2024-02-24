@@ -31,7 +31,7 @@ public class FallingState : AirbornState
             if (IsHorizontalInputZero)
                 StateSwitcher.SwitchState<IdlingState>();
             else
-                StateSwitcher.SwitchState<MovementWithLegsState>();
+                StateSwitcher.SwitchState<WalkingState>();
         }
 
     }

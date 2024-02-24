@@ -1,4 +1,4 @@
-public class WalkingState : MovementWithLegsState
+public class WalkingState : BaseMovingState
 {
     private WalkingStateConfig _config;
     public WalkingState(IStateSwitcher stateSwitcher, StateMachineData data, Character character) : base(stateSwitcher, data, character) => _config = character.Config.WalkingStateConfig;
@@ -17,6 +17,17 @@ public class WalkingState : MovementWithLegsState
         base.Exit();
 
         View.StopWalking();
+    }
+
+    public override void Update()
+    {
+        base.Update();
+
+        if (IsRunKeyPressed)
+            StateSwitcher.SwitchState<RunningState>();
+
+        if (IsFastRunKeyPressed) 
+            StateSwitcher.SwitchState<FastRunningState>();
     }
 
 }

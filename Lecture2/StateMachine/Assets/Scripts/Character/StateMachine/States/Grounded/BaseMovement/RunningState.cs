@@ -1,4 +1,4 @@
-public class RunningState : MovementWithLegsState
+public class RunningState : BaseMovingState
 {
     private RunningStateConfig _config;
     public RunningState(IStateSwitcher stateSwitcher, StateMachineData data, Character character) : base(stateSwitcher, data, character) { 
@@ -19,5 +19,15 @@ public class RunningState : MovementWithLegsState
         base.Exit();
 
         View.StopRunning();
+    }
+
+    public override void Update()
+    {
+        base.Update();
+
+        if (IsRunKeyPressed)
+            return;
+
+        StateSwitcher.SwitchState<WalkingState>();
     }
 }

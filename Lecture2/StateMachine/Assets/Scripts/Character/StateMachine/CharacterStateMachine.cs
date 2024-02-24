@@ -14,7 +14,6 @@ public class CharacterStateMachine : IStateSwitcher
         _states = new List<IState>()
         {
             new IdlingState(this, data, character),
-            new MovementWithLegsState(this, data, character),
             new WalkingState(this, data, character),
             new RunningState(this, data, character),
             new FastRunningState(this, data, character),

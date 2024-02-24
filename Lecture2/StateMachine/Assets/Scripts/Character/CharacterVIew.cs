@@ -5,7 +5,7 @@ public class CharacterVIew : MonoBehaviour
 {
     private const string IsIdling = "IsIdling";
     private const string IsWalking = "IsWalking";
-    private const string IsMovementWithLegs = "IsMovementWithLegs";
+    private const string IsBaseMoving = "IsBaseMoving";
     private const string IsRunning = "IsRunning";
     private const string IsFastRunning = "IsFastRunning";
     private const string IsGrounded = "IsGrounded";
@@ -22,8 +22,8 @@ public class CharacterVIew : MonoBehaviour
     public void StartIdling() => _animator.SetBool(IsIdling, true);
     public void StopIdling() => _animator.SetBool(IsIdling, false);
 
-    public void StartMovementWithLegs() => _animator.SetBool(IsMovementWithLegs, true);
-    public void StopMovementWithLegs() => _animator.SetBool(IsMovementWithLegs, false);
+    public void StartBaseMoving() => _animator.SetBool(IsBaseMoving, true);
+    public void StopBaseMoving() => _animator.SetBool(IsBaseMoving, false);
 
     public void StartWalking() => _animator.SetBool(IsWalking, true);
     public void StopWalking() => _animator.SetBool(IsWalking, false);

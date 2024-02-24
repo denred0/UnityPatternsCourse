@@ -47,21 +47,21 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Run"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""4f85e655-2a01-4989-91e0-9726793f5217"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""FastRun"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""e2af0aaf-6f16-48ef-9241-dcbdb063d081"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [

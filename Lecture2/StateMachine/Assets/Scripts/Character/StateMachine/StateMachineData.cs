@@ -3,8 +3,8 @@ using System;
 public class StateMachineData {
     public float XVelocity;
     public float YVelocity;
-    public bool IsRunKeyPressed;
-    public bool IsFastRunKeyPressed;
+    //public bool IsRunKeyPressed;
+    //public bool IsFastRunKeyPressed;
 
     private float _speed;
     private float _xInput;

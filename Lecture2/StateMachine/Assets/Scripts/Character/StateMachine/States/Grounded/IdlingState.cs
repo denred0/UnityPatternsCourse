@@ -26,6 +26,6 @@ public class IdlingState : GroundedState
             return;
 
         if (IsGroundTouch)
-            StateSwitcher.SwitchState<MovementWithLegsState>();
+            StateSwitcher.SwitchState<WalkingState>();
     }
 }
