@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class RestingState : MovementState
 {
@@ -37,6 +39,12 @@ public class RestingState : MovementState
         if (Data.Energy >= _characterConfig.Energy)
         { 
             Data.Energy = _characterConfig.Energy;
+
+            Dictionary<Vector3, Type> _statesPoints = new Dictionary<Vector3, Type>();
+            _statesPoints.Add(new Vector3(0, 0, 0), typeof(RunningState));
+            Type stateName = _statesPoints[new Vector3(0, 0, 0)];
+
+
             StateSwitcher.SwitchState<RunningState>();
         }
     }

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd30de2adc59f874698f8f7d63381ae3, type: 3}
+  m_Name: CharacterConfig
+  m_EditorClassIdentifier: 
+  _energy: 40
+  _runningStateConfig:
+    <Speed>k__BackingField: 4
+  _restingStateConfig:
+    RestingPosition: {fileID: 407341155136726413, guid: a80393aa2cd48f64289bba64d08c4d05,
+      type: 3}
+    EnergyIncreasingAmount: 0.1
+    <RestingRange>k__BackingField: 0.1
+  _workingStateConfig:
+    WorkingPosition: {fileID: 3531598179903679624, guid: 6835a519f2c7a344994a8a0d11c1ac2f,
+      type: 3}
+    EnergyDecreasingAmount: 0.1
+    <WorkingRange>k__BackingField: 0.1
