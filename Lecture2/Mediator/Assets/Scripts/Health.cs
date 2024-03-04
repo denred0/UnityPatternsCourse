@@ -1,32 +1,48 @@
+using System;
+using UnityEngine;
+
 public class Health
 {
-    private int _currentHealth;
-
-    public Health()
+    public Health(int maxHealth)
     {
+        MaxHealth = Value = maxHealth;
+        Debug.Log($"Current health: {Value}");
     }
 
-    public void SetInitialHealth(int initialHealth)
+    public int MaxHealth { get; }
+
+    public int Value { get; private set; }
+
+    public void Add(int value)
     {
-        _currentHealth += initialHealth;
+        if (value < 0)
+            throw new ArgumentOutOfRangeException(nameof(value));
+
+        Value += value;
+
+        if (Value > MaxHealth)
+            Value = MaxHealth;
+
+        Debug.Log($"Current health: {Value}");
     }
 
-    public int CurrentHealth => _currentHealth;
-
-    public void DecreaseHealth(int decreaseAmount)
+    public void Reduce(int value)
     {
-        if (_currentHealth - decreaseAmount < 0)
+        if (value < 0)
+            throw new ArgumentOutOfRangeException(nameof(value));
+
+        Value -= value;
+
+        if (Value <= 0)
         {
-            _currentHealth = 0;
-        } else
-        {
-            _currentHealth -= decreaseAmount;
+            Value = 0;
         }
+
+        Debug.Log($"Current health: {Value}");
     }
 
-    public void IncreaseHealth(int increaseAmount)
+    public void ResetHealth()
     {
-        _currentHealth += increaseAmount;
+        Value = MaxHealth;
     }
-
 }

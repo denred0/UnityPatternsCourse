@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: GamePlayerConfig
   m_EditorClassIdentifier: 
   _playerConfig:
-    InitialHealth: 10
-    InitialLevel: 1
-    NextLevelExperience: 60
+    _initialHealth: 12
+    _initialLevel: 1
+    _nextLevelExperience: 60
   _healerConfig:
-    HealAmount: 3
+    _healAmount: 2
   _damagerConfig:
-    DamageAmount: 2
-  _increaseExperienceAmount: 15
+    _damageAmount: 2
+  _increaseExperienceAmount: 17
