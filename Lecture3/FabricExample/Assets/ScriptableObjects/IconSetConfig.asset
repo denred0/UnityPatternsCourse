@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fc3c6feffadae445b0c64d5b5d1b1da, type: 3}
+  m_Name: IconSetConfig
+  m_EditorClassIdentifier: 
+  _iconType: 1
+  _imageIconIconConfigs:
+  - _iconPrefab: {fileID: 2832793076125884727, guid: 9aa15fa265a78b5428c3b56aa1ebfb1e, type: 3}
+    _sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  _imageTextIconIconConfigs:
+  - _iconPrefab: {fileID: 8289954123383197434, guid: c11d351059cebbc4e9f4f937b2ff3a55, type: 3}
+    _sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+    _text: Hello
+  _startingPosition: {x: 0, y: 0, z: 0}
+  _offset: 0
